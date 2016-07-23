@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		933E5AD016F4F39B138D86DB /* Pods_UISwipeView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF1A5A17422D4EB14823175 /* Pods_UISwipeView.framework */; };
 		F70230C51D15A38F0019A82F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70230C41D15A38F0019A82F /* AppDelegate.swift */; };
 		F70230C71D15A38F0019A82F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70230C61D15A38F0019A82F /* ViewController.swift */; };
 		F70230CA1D15A38F0019A82F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70230C81D15A38F0019A82F /* Main.storyboard */; };
 		F70230CC1D15A38F0019A82F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70230CB1D15A38F0019A82F /* Assets.xcassets */; };
 		F70230CF1D15A38F0019A82F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70230CD1D15A38F0019A82F /* LaunchScreen.storyboard */; };
 		F70230DA1D15A38F0019A82F /* UISwipeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70230D91D15A38F0019A82F /* UISwipeViewUITests.swift */; };
+		F70230E51D15A3BE0019A82F /* UISwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70230E41D15A3BE0019A82F /* UISwipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CF1A5A17422D4EB14823175 /* Pods_UISwipeView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UISwipeView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B57E5210B9212F1F58704DD /* Pods-UISwipeView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISwipeView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UISwipeView/Pods-UISwipeView.debug.xcconfig"; sourceTree = "<group>"; };
+		D3F20550EF0E5F4A7823390A /* Pods-UISwipeView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UISwipeView.release.xcconfig"; path = "Pods/Target Support Files/Pods-UISwipeView/Pods-UISwipeView.release.xcconfig"; sourceTree = "<group>"; };
 		F70230C11D15A38F0019A82F /* UISwipeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UISwipeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70230C41D15A38F0019A82F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F70230C61D15A38F0019A82F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +41,7 @@
 		F70230D51D15A38F0019A82F /* UISwipeViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UISwipeViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70230D91D15A38F0019A82F /* UISwipeViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwipeViewUITests.swift; sourceTree = "<group>"; };
 		F70230DB1D15A38F0019A82F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70230E41D15A3BE0019A82F /* UISwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933E5AD016F4F39B138D86DB /* Pods_UISwipeView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +63,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5960C01AE74EE17EE7C30467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CF1A5A17422D4EB14823175 /* Pods_UISwipeView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABEFE8342472BBF1361142B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B57E5210B9212F1F58704DD /* Pods-UISwipeView.debug.xcconfig */,
+				D3F20550EF0E5F4A7823390A /* Pods-UISwipeView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F70230B81D15A38F0019A82F = {
 			isa = PBXGroup;
 			children = (
 				F70230C31D15A38F0019A82F /* UISwipeView */,
 				F70230D81D15A38F0019A82F /* UISwipeViewUITests */,
 				F70230C21D15A38F0019A82F /* Products */,
+				ABEFE8342472BBF1361142B9 /* Pods */,
+				5960C01AE74EE17EE7C30467 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +105,7 @@
 			children = (
 				F70230C41D15A38F0019A82F /* AppDelegate.swift */,
 				F70230C61D15A38F0019A82F /* ViewController.swift */,
+				F70230E41D15A3BE0019A82F /* UISwipeView.swift */,
 				F70230C81D15A38F0019A82F /* Main.storyboard */,
 				F70230CB1D15A38F0019A82F /* Assets.xcassets */,
 				F70230CD1D15A38F0019A82F /* LaunchScreen.storyboard */,
@@ -103,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F70230DE1D15A38F0019A82F /* Build configuration list for PBXNativeTarget "UISwipeView" */;
 			buildPhases = (
+				3FC053EFAC509497D3272159 /* [CP] Check Pods Manifest.lock */,
 				F70230BD1D15A38F0019A82F /* Sources */,
 				F70230BE1D15A38F0019A82F /* Frameworks */,
 				F70230BF1D15A38F0019A82F /* Resources */,
+				250D0403433FA29393464FF3 /* [CP] Embed Pods Frameworks */,
+				E646FD5640918690544F8F3B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +222,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		250D0403433FA29393464FF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UISwipeView/Pods-UISwipeView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FC053EFAC509497D3272159 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E646FD5640918690544F8F3B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UISwipeView/Pods-UISwipeView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F70230BD1D15A38F0019A82F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -199,6 +277,7 @@
 			files = (
 				F70230C71D15A38F0019A82F /* ViewController.swift in Sources */,
 				F70230C51D15A38F0019A82F /* AppDelegate.swift in Sources */,
+				F70230E51D15A3BE0019A82F /* UISwipeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +406,7 @@
 		};
 		F70230DF1D15A38F0019A82F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B57E5210B9212F1F58704DD /* Pods-UISwipeView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UISwipeView/Info.plist;
@@ -338,6 +418,7 @@
 		};
 		F70230E01D15A38F0019A82F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3F20550EF0E5F4A7823390A /* Pods-UISwipeView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UISwipeView/Info.plist;
@@ -388,6 +469,7 @@
 				F70230E01D15A38F0019A82F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F70230E11D15A38F0019A82F /* Build configuration list for PBXNativeTarget "UISwipeViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +478,7 @@
 				F70230E31D15A38F0019A82F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
