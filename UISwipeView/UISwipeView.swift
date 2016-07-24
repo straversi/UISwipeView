@@ -27,27 +27,37 @@ public class UISwipeView: UIView {
     public var swipeDidEnd: (Int) -> Void = { _ in }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
-
+    
     public init(subviews: [UIView]) {
         super.init(frame: CGRectZero)
         self.setSubviews(subviews)
     }
     
-//    override public func layoutSubviews() {
-//        print("layout subviews")
-//    }
+    /* Initializer to be called if self is instantiated from nib. */
+    public func initFromNibWithSubviews(subviews: [UIView]) {
+        self.setSubviews(subviews)
+        self.finishSetup()
+    }
     
     /* Bounds are set during the first call to layoutSubviews. Now that bounds are set,
      * setup the subviews with their constraints. */
     override public var bounds: CGRect {
         didSet {
-            self.setupSubviews(self.subViewContents)
-            self.addGestureRecognizers()
-            self.userInteractionEnabled = true
-//            print("set bounds")
+            // Check for subViewContents length in case view is instantiated from nib
+            if self.subViewContents.count > 2 {
+                self.finishSetup()
+            }
         }
+    }
+    
+    /* Finish setting up constraints and recognizers (call after bounds are set) */
+    private func finishSetup() {
+        self.setupSubviews(self.subViewContents)
+        self.addGestureRecognizers()
+        self.userInteractionEnabled = true
+        // print("set bounds")
     }
     
     /* Sets the list of subview contents */
@@ -115,7 +125,7 @@ public class UISwipeView: UIView {
     }
     
     private func animate(animations: () -> Void, completion: () -> Void) {
-//        self.setNeedsUpdateConstraints()
+        //        self.setNeedsUpdateConstraints()
         UIView.animateWithDuration(0.2, delay: 0.0, options: [.CurveEaseOut], animations: animations, completion: { finished in
             completion()
         })
@@ -128,9 +138,9 @@ public class UISwipeView: UIView {
             self.loadedSubViews[2].constraint.constant = 0
             self.layoutIfNeeded()
         }
+        self.sendSubviewToBack(self.loadedSubViews[0])
+        self.loadedSubViews[0].constraint.constant = self.frame.width
         animate(animations, completion: { () in
-            self.loadedSubViews[0].constraint.constant = self.frame.width
-            self.sendSubviewToBack(self.loadedSubViews[0])
             self.currentViewIndex = self.nextIndex
             self.setLoadedSubview(0, view: self.subViewContents[self.nextIndex])
             self.reIndexSubviewsBackward()
@@ -145,9 +155,9 @@ public class UISwipeView: UIView {
             self.loadedSubViews[1].constraint.constant = self.frame.width
             self.layoutIfNeeded()
         }
+        self.sendSubviewToBack(self.loadedSubViews[2])
+        self.loadedSubViews[2].constraint.constant = -self.frame.width
         animate(animations, completion: { () in
-            self.loadedSubViews[2].constraint.constant = -self.frame.width
-            self.sendSubviewToBack(self.loadedSubViews[2])
             self.currentViewIndex = self.prevIndex
             self.setLoadedSubview(2, view: self.subViewContents[self.prevIndex])
             self.reIndexSubviewsForward()
@@ -223,7 +233,7 @@ public class UISwipeView: UIView {
         public init() {
             super.init(frame: CGRectZero)
         }
-    
+        
     }
     
 }
