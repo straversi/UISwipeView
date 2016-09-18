@@ -4,6 +4,10 @@
 
 The main file is ./UISwipeView/UISwipeView.swift
 
+### Dependency
+
+* [Cartography](https://github.com/robb/Cartography)
+
 *Disclaimer*: Custom views can be initialized differently if you're using storyboard or not. Until I've documented each use, some experience may help with setting up your specific case.
 
 To initialize a UISwipeView, prepare an outlet to a UISwipeView, or create the view programatically.
