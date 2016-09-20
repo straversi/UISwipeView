@@ -1,7 +1,5 @@
 # UISwipeView
 
-## Setup
-
 The main file is ./UISwipeView/UISwipeView.swift
 
 ### Dependency
@@ -10,13 +8,37 @@ The main file is ./UISwipeView/UISwipeView.swift
 
 *Disclaimer*: Custom views can be initialized differently if you're using storyboard or not. Until I've documented each use, some experience may help with setting up your specific case.
 
-To initialize a UISwipeView, prepare an outlet to a UISwipeView, or create the view programatically.
+## Get going
+
+### Programmatic
+
+Initialize a UISwipeView in viewDidLoad:
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let contentViews = [view1, view2, ...]
+    let swipeView = UISwipeView(subviews: contentViews)
+    self.view.addSubview(swipeView)
+    constrain(swipeView) { swipe in
+        // constrain swipeView (this example uses Cartography)
+    }
+    swipeView.swipeDidEnd = { chartIndex in
+        // do something with currentIndex if you'd like
+    }
+}
+```
+
+### Storyboard
+
+To initialize a UISwipeView, prepare an outlet to a UISwipeView.
 
 ```swift
 @IBOutlet weak var swipeView: UISwipeView!
 ```
 
-Then, in viewDidAppear (or viewDidLoad if you created UISwipeView with bounds programatically):
+Then, in viewDidAppear:
 
 ```swift
 override func viewDidAppear(animated: Bool) {
